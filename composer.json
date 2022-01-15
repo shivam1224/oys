@@ -11,7 +11,10 @@
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.2",
         "illuminate/mail": "^8.75",
-        "laravel/lumen-framework": "^8.0"
+        "laravel/lumen-framework": "^8.0",
+        "razorpay/razorpay": "^2.8",
+        "twilio/sdk": "^6.32",
+        "illuminate/session": "^8.78"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",

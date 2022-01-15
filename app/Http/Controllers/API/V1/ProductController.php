@@ -151,6 +151,7 @@ class ProductController extends Controller
                 'price'               => $request->price,
                 'description'         => $request->description,
                 'category_id'         => $request->category_id,
+                'offer'                => $request->offer,
                 'user_id'             => auth()->user()->id,
                 'product_image'       => $path['product_image'],
                 'product_image_name'  => $path['product_image_name'],

@@ -7,6 +7,8 @@ $router->get('/', function () use ($router) {
 $router->group(['namespace' => 'API\V1', 'prefix' => 'api/v1', 'as' => 'API.'], function ($router) {
     $router->post('login', 'AuthController@userLogin');
     $router->post('user_signup', 'AuthController@userSignup');
+    $router->get('product/byid/product/{id}',     ['as'    => 'listproduct',  'uses'  => 'ProductController@getByID']);
+
 });
 
 
@@ -28,7 +30,6 @@ $router->group(['namespace' => 'API\V1', 'prefix' => 'api/v1', 'middleware' => [
     $router->group(['prefix' => 'product'], function () use ($router) { 
 
         $router->get('list/product',     ['as'    => 'listproduct',  'uses'  => 'ProductController@index']);
-        $router->get('byid/product/{id}',     ['as'    => 'listproduct',  'uses'  => 'ProductController@getByID']);
         $router->post('add/product',     ['as'    => 'addproduct',   'uses'  => 'ProductController@addProduct']);
         $router->post('delete/product',  ['as'    => 'deleteproduct','uses'  => 'ProductController@destroy']);
 
